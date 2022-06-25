@@ -273,7 +273,8 @@ function validation() {
 $('#calculate').on('click', function() {
     if (error == 0) {
         $('#error').html('');
-
+        $('#zero-roy').html('');
+        
         var bookType = $('input[name=booktype]:checked', '#book-type').val();
         var interType = $("#inter-type option:selected").attr('value');
         var pageCount = $("#page-count").val();
