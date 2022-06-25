@@ -1,0 +1,115 @@
+# abdouaaba.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <header>
+        <h1 id="head1">Printing Cost & Royalty Calculator</h1>
+    </header>
+
+    <main>
+        <p>Printing cost depends on which Amazon marketplace (website) your paperback was ordered from. Costs also vary depending on page count and ink type (black ink or color ink). Trim size, bleed settings, and cover finish don't affect printing cost. Use this calculator to determine your printing cost, minimum list price, and royalties.</p>
+        <section id="calculator">
+            <h2 id="head2">Calculator</h2>
+            <table id="calcul-table">
+                <tbody>
+                    <tr>
+                        <td class="label">Book type</td>
+                        <td class="field btn-group" id="book-type">
+                            <input type="radio" class="btn-check" name="booktype" value="paperback" id="pb" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="pb">Paperback</label>
+
+                            <input type="radio" class="btn-check" name="booktype" value="hardcover" id="hc" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="hc">Hardcover</label>
+
+                            <!-- <select name="book-type" id="book-type">
+                                <option value="paperback">Paperback</option>
+                                <option value="hardcover">Hardcover</option>
+                            </select> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Interior and paper type</td>
+                        <td class="field">
+                            <select name="inter-type" id="inter-type">
+                                <option value="bw_wp">Black and white interior with white paper</option>
+                                <option value="bw_cp">Black and white interior with cream paper</option>
+                                <option value="pc_wp">Premium color interior with white paper</option>
+                                <option value="sc_wp">Standard color interior with white paper</option> 
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Page count</td>
+                        <td class="field">
+                            <input type="number" id="page-count">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Marketplace</td>
+                        <td class="field">
+                            <select name="market" id="market">
+                                <option value="us">Amazon.com</option>
+                                <option value="au">Amazon.com.au</option>
+                                <option value="ca">Amazon.ca</option>
+                                <option value="uk">Amazon.co.uk</option>
+                                <option value="de">Amazon.de</option>
+                                <option value="es">Amazon.es</option>
+                                <option value="it">Amazon.it</option>
+                                <option value="fr">Amazon.fr</option>
+                                <option value="nl">Amazon.nl</option>
+                                <option value="se">Amazon.se</option>
+                                <option value="pl">Amazon.pl</option>
+                                <option value="jp">Amazon.cp.jp</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">List price</td>
+                        <td class="field">
+                            <input type="number" id="list-price">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button id="calculate" onclick="validation()">Calculate</button></td>
+                        <td><span id="error" style="color: red;"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="result">
+            <table id="results-table">
+                <tbody>
+                    <tr>
+                        <th class="table-head" id="market-h">Marketplace</th>
+                        <th class="table-head" id="list-h">List price</th>
+                        <th class="table-head" id="min-h">Minimum list price</th>
+                        <th class="table-head" id="print-h">Printing</th>
+                        <th class="table-head" id="roy-h">Estimated royalty</th>
+                    </tr>
+                    <tr>
+                        <td class="table-data" id="market-res"></td>
+                        <td class="table-data" id="list-price-res"></td>
+                        <td class="table-data" id="min-price-res"></td>
+                        <td class="table-data" id="print-res"></td>
+                        <td class="table-data" id="estroy-res"></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <span id="zero-roy"></span>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
