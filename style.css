@@ -151,17 +151,97 @@ main {
   border-radius: 0 0.5em 0 0;
 }
 
-#result #results-table tr #market-res {
+#result #results-table tr .market-res {
   font-weight: 500;
   outline: none;
   border-radius: 0 0 0 0.5em;
 }
 
-#result #results-table tr #estroy-res {
+#result #results-table tr .estroy-res {
   border: none;
   border-radius: 0 0 0.5em 0;
 }
 
 #result #zero-roy {
   font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+#result #results-table-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 745px) {
+  * {
+    font-size: 12px;
+  }
+  main {
+    width: 100%;
+    border-radius: 0;
+  }
+  #calculator {
+    padding: 2em 0.5em;
+    width: 80%;
+  }
+  #calculator #calcul-table tr td {
+    width: 50%;
+  }
+  #calculator #calcul-table tr td #inter-type, #calculator #calcul-table tr td #market {
+    max-width: 175px;
+  }
+  #result #results-table {
+    display: none;
+  }
+  #result #results-table-mobile {
+    display: table;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #result #results-table-mobile tr {
+    height: 5em;
+  }
+  #result #results-table-mobile tr .table-head {
+    background-color: #0a5dd9;
+    width: 30%;
+    color: white;
+  }
+  #result #results-table-mobile tr .table-data {
+    background-color: whitesmoke;
+    width: 30%;
+    border-right: 0.01em solid white;
+  }
+  #result #results-table-mobile tr #market-h-mbl {
+    border-radius: 0.5em 0 0;
+  }
+  #result #results-table-mobile tr #roy-h-mbl {
+    border-radius: 0 0 0 0.5em;
+  }
+  #result #results-table-mobile tr #market-res-mbl {
+    font-weight: 500;
+    outline: none;
+    border-radius: 0 0.5em 0 0;
+  }
+  #result #results-table-mobile tr #estroy-res-mbl {
+    border: none;
+    border-radius: 0 0 0.5em 0;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #calculator {
+    width: 100%;
+  }
+  #result #results-table-mobile {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  #calculator #calcul-table tr .label {
+    width: 30%;
+  }
+  #calculator #calcul-table tr .btn-group {
+    min-width: 175px;
+  }
 }
