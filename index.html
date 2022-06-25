@@ -28,10 +28,6 @@
                             <input type="radio" class="btn-check" name="booktype" value="hardcover" id="hc" autocomplete="off">
                             <label class="btn btn-outline-primary" for="hc">Hardcover</label>
 
-                            <!-- <select name="book-type" id="book-type">
-                                <option value="paperback">Paperback</option>
-                                <option value="hardcover">Hardcover</option>
-                            </select> -->
                         </td>
                     </tr>
                     <tr>
@@ -95,16 +91,43 @@
                         <th class="table-head" id="roy-h">Estimated royalty</th>
                     </tr>
                     <tr>
-                        <td class="table-data" id="market-res"></td>
-                        <td class="table-data" id="list-price-res"></td>
-                        <td class="table-data" id="min-price-res"></td>
-                        <td class="table-data" id="print-res"></td>
-                        <td class="table-data" id="estroy-res"></td>
+                        <td class="table-data market-res"></td>
+                        <td class="table-data list-price-res"></td>
+                        <td class="table-data min-price-res"></td>
+                        <td class="table-data print-res"></td>
+                        <td class="table-data estroy-res"></td>
                     </tr>
                 </tbody>
                 
             </table>
-            <span id="zero-roy"></span>
+            <h6 id="zero-roy"></h6>
+            <table id="results-table-mobile">
+                
+                <tbody>
+                    <tr>
+                        <th class="table-head" id="market-h-mbl">Marketplace</th>
+                        <td class="table-data market-res" id="market-res-mbl"></td>
+                    </tr>
+                    <tr>
+                        <th class="table-head" id="list-h-mbl">List price</th>
+                        <td class="table-data list-price-res" id="list-price-res-mbl"></td>
+                    </tr>
+                    <tr>
+                        <th class="table-head" id="min-h-mbl">Minimum list price</th>
+                        <td class="table-data min-price-res" id="min-price-res-mbl"></td>
+                    </tr>
+                    <tr>
+                        <th class="table-head" id="print-h-mbl">Printing</th>
+                        <td class="table-data print-res" id="print-res-mbl"></td>
+                    </tr>
+                    <tr>
+                        <th class="table-head" id="roy-h-mbl">Estimated royalty</th>
+                        <td class="table-data estroy-res" id="estroy-res-mbl" ></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            
         </section>
     </main>
 
