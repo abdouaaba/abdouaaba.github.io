@@ -1,5 +1,4 @@
-
-
+// defining constants
 const maxPrice = {
 'us': 250,
 'ca': 350,
@@ -214,6 +213,13 @@ function validation() {
     // validate max price
     if (listPrice > maxPrice[market]) {
         errorField.html('List price cannot be above ' + maxPrice[market] + ' ' + devises[market] + '.');
+        error = 1;
+        return;
+    }
+
+    // validate page count == integer
+    if (!(Math.round(pageCount) == pageCount)) {
+        errorField.html("Please enter a valid number of pages (integer).");
         error = 1;
         return;
     }
