@@ -314,11 +314,11 @@ $('#calculate').on('click', function() {
             $('#zero-roy').html('If the estimated royalty is 0.00 ' + devises[market] + ', the list price is not high enough to generate a royalty.');
         }
 
-        $('#market-res').html(marketURL);
-        $('#list-price-res').html(listPrice + ' ' + devises[market]);
-        $('#min-price-res').html(minPrice + ' ' + devises[market]);
-        $('#print-res').html(printCost + ' ' + devises[market]);
-        $('#estroy-res').html(estRoy + ' ' + devises[market]);
+        $('.market-res').html(marketURL);
+        $('.list-price-res').html(listPrice + ' ' + devises[market]);
+        $('.min-price-res').html(minPrice + ' ' + devises[market]);
+        $('.print-res').html(printCost + ' ' + devises[market]);
+        $('.estroy-res').html(estRoy + ' ' + devises[market]);
 
     }
 })
